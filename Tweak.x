@@ -1,34 +1,34 @@
 /*
 // Namespace:
-public class LoseMoves : AbstractLoseCondition // TypeDefIndex: 11609
+public class LoseMoves : AbstractLoseCondition // TypeDefIndex: 11611
 {
 	// Fields
-	[SerializeField] // RVA: 0x189AB8 Offset: 0x189AB8 VA: 0x100189AB8
+	[SerializeField] // RVA: 0x18B2BC Offset: 0x18B2BC VA: 0x10018B2BC
 	private int startMoves; // 0x34
-	[SerializeField] // RVA: 0x189AC8 Offset: 0x189AC8 VA: 0x100189AC8
+	[SerializeField] // RVA: 0x18B2CC Offset: 0x18B2CC VA: 0x10018B2CC
 	private int remainingMoves; // 0x38
-	[SerializeField] // RVA: 0x189AD8 Offset: 0x189AD8 VA: 0x100189AD8
+	[SerializeField] // RVA: 0x18B2DC Offset: 0x18B2DC VA: 0x10018B2DC
 	private int offerMoves; // 0x3C
 	protected bool won; // 0x40
 
 	// Methods
 
-	// RVA: 0x19D68C4 Offset: 0x19D68C4 VA: 0x1019D68C4
+	// RVA: 0x1A5B620 Offset: 0x1A5B620 VA: 0x101A5B620
 	public int get_StartMoves() { }
 
-	// RVA: 0x19D68CC Offset: 0x19D68CC VA: 0x1019D68CC
+	// RVA: 0x1A5B628 Offset: 0x1A5B628 VA: 0x101A5B628
 	public void set_StartMoves(int value) { }
 
-	// RVA: 0x19D68D4 Offset: 0x19D68D4 VA: 0x1019D68D4
+	// RVA: 0x1A5B630 Offset: 0x1A5B630 VA: 0x101A5B630
 	public int get_RemainingMoves() { }
 
-	// RVA: 0x19D68DC Offset: 0x19D68DC VA: 0x1019D68DC
+	// RVA: 0x1A5B638 Offset: 0x1A5B638 VA: 0x101A5B638
 	public void set_RemainingMoves(int value) { }
 
-	// RVA: 0x19D68E4 Offset: 0x19D68E4 VA: 0x1019D68E4 Slot: 6
+	// RVA: 0x1A5B640 Offset: 0x1A5B640 VA: 0x101A5B640 Slot: 6
 	public override void InitComponent() { }
 }
-*/
+ */
 
 #include <mach-o/dyld.h>
 #include <substrate.h>
@@ -44,10 +44,10 @@ void new_LoseMoves__InitComponent (void* __this, const void* method) {
 
 %ctor {
     NSString *shortVersionString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    if (![shortVersionString isEqualToString:@"9.7.1"]) {
+    if (![shortVersionString isEqualToString:@"9.9.0"]) {
         return;
     }
 
     intptr_t slide = _dyld_get_image_vmaddr_slide(0);
-    MSHookFunction((void *)(slide + 0x1019D68E4), (void *)new_LoseMoves__InitComponent, (void **)&LoseMoves__InitComponent);
+    MSHookFunction((void *)(slide + 0x101A5B640), (void *)new_LoseMoves__InitComponent, (void **)&LoseMoves__InitComponent);
 }
